@@ -1,0 +1,45 @@
+.all{
+  display: flex;
+  flex-direction: row;
+  margin-top: 5vh;
+
+}
+
+.sidebar{
+  position: fixed;
+  width: 18vw;
+  height: 90vh;
+  background-color: white;
+  border-radius: 40px;
+  margin-left: 3vw;
+
+}
+nav{
+  width:70vw;
+  height:7vh;
+  background-color: white;
+  border-radius: 40px;
+  position: fixed;
+  margin-left: 25vw;
+}
+.order{
+  display: flex;
+  flex-direction: row;
+}
+
+.calendar{
+  width:20vw;
+  height:45vh;
+  background-color: white;
+  border-radius: 40px;
+  margin-left: 25vw;
+  margin-top: 10vh;
+}
+.mytasks{
+    width:30vw;
+    height:45vh;
+    background-color: white;
+    border-radius: 40px;
+    margin-left: 2vw;
+    margin-top: 10vh;
+}

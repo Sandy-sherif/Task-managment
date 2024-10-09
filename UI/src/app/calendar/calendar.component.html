@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="calendar">
+    <header>
+
+
+      <div class="header-display">
+        <p>{{ formattedDate }}</p>
+      </div>
+      <pre (click)="changeMonth(-1)" class="left"><</pre>
+      <pre (click)="changeMonth(1)" class="right">></pre>
+    </header>
+    <hr />
+
+    <div class="week">
+      <div>Su</div>
+      <div>Mo</div>
+      <div>Tu</div>
+      <div>We</div>
+      <div>Th</div>
+      <div>Fr</div>
+      <div>Sa</div>
+    </div>
+
+    <div class="days">
+      <div *ngFor="let day of daysArray" [class.current-date]="isCurrentDate(day)"
+           (click)="selectDate(day)">
+        {{ day || '' }}
+      </div>
+  </div>
+
+  <div class="display-selected">
+    <p>Selected Date: {{ selectedDate || '' }}</p>
+  </div>
+</div>

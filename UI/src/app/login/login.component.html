@@ -1,0 +1,49 @@
+<div class="all">
+  <div class="left">
+    <div class="square">
+      <div class="image"></div>
+
+    </div>
+
+
+  </div>
+  <div class="right">
+    <div class="logo">
+      <span align="center">AZ</span>
+    </div>
+    <h3>Organizo</h3>
+    <div *ngIf="login==true" class="login">
+      <form action="">
+
+      <label for="email">Email</label><br>
+      <input type="email" name="email" placeholder="Your email" [(ngModel)]="loginmodel.userEmail"><br>
+      <label for="password">Password</label><br>
+      <input type="password" name="password" placeholder="Your password" [(ngModel)]="loginmodel.userPassword"><br>
+      <p style="color: red;">{{msg}}</p>
+      <button type="submit" (click)="loginfun()"> Continue <img loading="lazy" src="./next.png" alt="" width="6%" align="center"></button>
+      <div class="cotore">
+      <p>Not a member?</p>
+      <a (click)="changelogin()">Signup now</a>
+      </div>
+    </form>
+    </div>
+    <div *ngIf="login==false" class="register">
+      <form action="">
+        <label for="username">Username</label><br>
+      <input type="username" name="username" placeholder="Your Name" [(ngModel)]="registermodel.userName"><br>
+      <label for="email">Email</label><br>
+      <input type="email" name="email" placeholder="Your email" [(ngModel)]="registermodel.userEmail"><br>
+      <label for="password">Password</label><br>
+      <input type="password" name="password" placeholder="Your password" [(ngModel)]="registermodel.userPassword"><br>
+      <p style="color: red;">{{msg}}</p>
+      <button type="submit" (click)="registerfun()"> Register <img loading="lazy" src="./next.png" alt="" width="6%" align="center"></button>
+      <div class="cotore">
+      <p>Already have an account?</p>
+      <a (click)="changelogin()">Signin now</a>
+      </div>
+    </form>
+    </div>
+  </div>
+
+</div>
+

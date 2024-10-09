@@ -1,0 +1,122 @@
+
+
+.all{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.left,.right{
+  width: 40vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.square{
+  background-color: white;
+  border-radius: 10%;
+  width: 32vw;
+  height: 65vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.image{
+  background-image: url('../../../public/0ec7e4c3-8e16-4f18-af02-c3420f978e3d.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 30vw;
+  height: 50vh;
+
+}
+
+.logo{
+  background-color: #FAE150;
+  border-radius: 50%;
+  height: 7%;
+  width: 9%;
+  border-color: black;
+  border-width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-color: black;
+  border-style:outset;
+  border-width: 1px;
+}
+span{
+  font-size:x-large;
+}
+.right{
+  flex-direction: column;
+
+}
+h3{
+  font-size: xx-large;
+  font-family: "Corben", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.register{
+  height: 45vh;
+  width:25vw;
+  background-color: white;
+  border-radius: 10%;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+ margin-top: 20px;
+}
+.login{
+  height: 35vh;
+  width:25vw;
+  background-color: white;
+  border-radius: 10%;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+ margin-top: 20px;
+
+}
+label{
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  margin: 10px 0;
+}
+input{
+  background-color: #F7F5F4;
+  width:max-content;
+  border-radius: 60px;
+  border-color: transparent;
+  height: 5vh;
+  width: 20vw;
+  margin: 10px 0;
+
+}
+
+button{
+  border-radius: 60px;
+  height: 5vh;
+  width: 20vw;
+  background-color: #FAE150;
+}
+.cotore{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+a{
+  color:#dab900;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+

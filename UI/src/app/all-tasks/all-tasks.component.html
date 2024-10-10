@@ -1,0 +1,75 @@
+
+<div class="all">
+<div class="today">
+  <ul>
+    <li>
+      <span>Today</span>
+      <div class="space">
+        <span>Due Date</span>
+        <span>Stage</span>
+        <span>Priority</span>
+      </div>
+    </li>
+    <li *ngFor="let task of tasksOfToday">
+      <div class="center">
+      <input class="checkbox-round" type="checkbox">
+
+      <span >{{task.taskName}}</span>
+    </div>
+      <div class="space">
+        <span class="day">{{task.taskDueDate}}</span>
+        <span class="stage" [ngStyle]="{'background-color': task.taskStage=='Not started'? '#F2F2F2': task.taskStage=='In Progress' ? '#FAE150':'#4AA433'}">{{task.taskStage}}</span>
+        <span class="priority" [ngStyle]="{'background-color': task.taskPriority=='High'? '#CF984A': task.taskPriority=='Medium' ? '#DEC48F':'#F5E8C4'}">{{task.taskPriority}}</span>
+      </div>
+    </li>
+  </ul>
+</div>
+<div class="tomorrow">
+  <ul>
+    <li>
+      <span>Tomorrow</span>
+      <div class="space">
+        <span>Due Date</span>
+        <span>Stage</span>
+        <span>Priority</span>
+      </div>
+    </li>
+    <li *ngFor="let task of tasksOfTomorrow">
+      <div class="center">
+      <input class="checkbox-round" type="checkbox">
+
+      <span >{{task.taskName}}</span>
+    </div>
+      <div class="space">
+        <span class="day">{{task.taskDueDate}}</span>
+        <span class="stage" [ngStyle]="{'background-color': task.taskStage=='Not started'? '#F2F2F2': task.taskStage=='In Progress' ? '#FAE150':'#4AA433'}">{{task.taskStage}}</span>
+        <span class="priority" [ngStyle]="{'background-color': task.taskPriority=='High'? '#CF984A': task.taskPriority=='Medium' ? '#DEC48F':'#F5E8C4'}">{{task.taskPriority}}</span>
+      </div>
+    </li>
+  </ul>
+</div>
+<div class="week">
+  <ul>
+    <li>
+      <span>This Week</span>
+      <div class="space">
+        <span>Due Date</span>
+        <span>Stage</span>
+        <span>Priority</span>
+      </div>
+    </li>
+    <li *ngFor="let task of tasksOfWeek">
+      <div class="center">
+      <input class="checkbox-round" type="checkbox">
+
+      <span >{{task.taskName}}</span>
+    </div>
+      <div class="space">
+        <span class="day">{{task.taskDueDate}}</span>
+        <span class="stage" [ngStyle]="{'background-color': task.taskStage=='Not started'? '#F2F2F2': task.taskStage=='In Progress' ? '#FAE150':'#4AA433'}">{{task.taskStage}}</span>
+        <span class="priority" [ngStyle]="{'background-color': task.taskPriority=='High'? '#CF984A': task.taskPriority=='Medium' ? '#DEC48F':'#F5E8C4'}">{{task.taskPriority}}</span>
+      </div>
+    </li>
+  </ul>
+</div>
+</div>

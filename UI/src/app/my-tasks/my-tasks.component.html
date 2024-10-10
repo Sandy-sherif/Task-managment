@@ -1,1 +1,13 @@
-<p>my-tasks works!</p>
+<ul>
+  <li>My tasks ({{numberoftasks}})</li>
+  <li *ngFor="let task of tasks">
+    <div class="align">
+      <input class="checkbox-round" type="checkbox">
+      <span>{{task.taskName}}</span>
+
+    </div>
+
+    <span [ngStyle]="{'color': task.taskDueDate=='Today'? '#ffd900': 'black'}">{{task.taskDueDate}}</span>
+
+  </li>
+</ul>

@@ -6,16 +6,16 @@
     </div>
     <p>Organzio</p>
   </li>
-  <li  class="second">
-    <a href="">
+  <li  class="second" [ngClass]="{'active-link': currentRoute === '/home/dashboard'}" >
+    <a routerLink="/home/dashboard"  >
     <img align="center" src="./icons8-dashboard-48.png" height="25vh"/>
     <span class="nav-text" >
        Dashboard
    </span>
   </a>
   </li>
-  <li class="second">
-    <a href="">
+  <li  class="second" [ngClass]="{'active-link': currentRoute === '/home/myTasks'}">
+    <a routerLink="/home/myTasks"   >
     <img align="center" src="./icons8-tasks-50.png" height="25vh"/>
     <span class="nav-text" >
        My tasks

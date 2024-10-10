@@ -95,11 +95,21 @@ li {
     margin-right: 0;
   }
   .s{
-    margin-left: 1%;
+    height: 40px;
+    width: 20%;
+    background-color: transparent;
+
+  }
+
+  input::placeholder{
+    color: black;
+    font-size: larger;
   }
   .hidden-input {
-    visibility: hidden;
     width: fit-content;
-
+    background-color: transparent;
     cursor: pointer;
   }
+.option:focus{
+  background-color: #FAE150;
+}

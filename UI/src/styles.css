@@ -11,7 +11,8 @@
 body{
   height:100vh;
   background-color: #F7F5F4;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 
 }
 

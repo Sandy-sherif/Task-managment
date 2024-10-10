@@ -20,13 +20,13 @@ const addTask = async (req,res)=>{
 
 const getAllTasks = async (req,res)=>{
     let tasks = await Task.find({})
-    res.json(products)
+    res.json(tasks)
 }
 
 const getSingleTask = async (req,res)=>{
     let id = req.params.id
     let intendeTask = await Task.findOne({_id : id })
-    res.json(intendeProduct || {msg : "Not Found"})
+    res.json(intendeTask || {msg : "Not Found"})
 
 }
 

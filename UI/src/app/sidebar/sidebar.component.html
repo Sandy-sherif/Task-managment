@@ -6,7 +6,7 @@
     </div>
     <p>Organzio</p>
   </li>
-  <li  class="second" [ngClass]="{'active-link': currentRoute === '/home/dashboard'}" >
+  <li  class="second" [ngClass]="{'active-link': currentRoute === '/home/dashboard' || currentRoute === '/home'}" >
     <a routerLink="/home/dashboard"  >
     <img align="center" src="./icons8-dashboard-48.png" height="25vh"/>
     <span class="nav-text" >

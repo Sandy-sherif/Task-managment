@@ -88,3 +88,10 @@ pre {
   padding: 20px 20px;
   text-align: center;
 }
+.focuss:focus{
+  background-color: #FAE150;
+  color: black;
+  border-color: black;
+  border-style: solid;
+  border-width: 0.5px;
+}

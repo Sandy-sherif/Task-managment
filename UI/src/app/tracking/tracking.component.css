@@ -1,0 +1,25 @@
+li{
+  padding:3% 7%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #F7F5F4;
+  flex-direction: row;
+  width: 100%;
+}
+li:last-child{
+  border-bottom: none;
+}
+li:first-child{
+  font-size: larger;
+}
+
+span{
+  padding: 0 7%;
+}
+div{
+  display: flex;
+  flex-direction: row;
+}
+.elnos{
+  width: 50%;
+}

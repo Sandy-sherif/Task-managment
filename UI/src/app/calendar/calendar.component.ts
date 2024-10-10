@@ -1,10 +1,11 @@
-import { NgForOf } from '@angular/common';
+import { TaskService } from './../services/task.service';
+import { NgForOf, NgClass } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-calendar',
   standalone: true,
-  imports: [NgForOf],
+  imports: [NgForOf,NgClass],
   templateUrl: './calendar.component.html',
   styleUrl: './calendar.component.css'
 })
@@ -12,9 +13,12 @@ export class CalendarComponent implements OnInit {
   date: Date = new Date();
   year: number = this.date.getFullYear();
   month: number = this.date.getMonth();
+  selectedDivId:number=10;
   daysArray: (number | null)[] = [];
   formattedDate: string = '';
-  selectedDate: string | null = null;
+  selectedDate: any = new Date(this.year, this.month, 10).toDateString()
+
+  constructor(private service:TaskService){}
 
   ngOnInit(): void {
     this.displayCalendar();
@@ -59,17 +63,31 @@ export class CalendarComponent implements OnInit {
     if (day !== null) {
       const selected = new Date(this.year, this.month, day);
       this.selectedDate = selected.toDateString();
+      console.log(this.selectedDate)
+      this.changeDate(new Date(Date.UTC(new Date(this.selectedDate).getUTCFullYear(), new Date(this.selectedDate).getUTCMonth(), new Date(this.selectedDate).getUTCDate()+1)).toISOString().replace('Z', '+00:00'))
     }
   }
 
   isCurrentDate(day: number | null): boolean {
     if (day === null) return false;
 
+
     const currentDate = new Date();
+
+
     return (
+
       this.year === currentDate.getFullYear() &&
       this.month === currentDate.getMonth() &&
       day === currentDate.getDate()
     );
+  }
+  changeColor(divId: number) {
+    this.selectedDivId = divId; // Update selected div ID
+  }
+
+  changeDate(newdate: string) {
+    console.log(newdate);
+    this.service.changeDate(newdate); // This will notify other components
   }
 }

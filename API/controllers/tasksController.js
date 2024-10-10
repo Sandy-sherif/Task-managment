@@ -22,6 +22,19 @@ const getAllTasks = async (req,res)=>{
     let tasks = await Task.find({})
     res.json(tasks)
 }
+const filtertasks = async (req,res)=>{
+    const { category, date } = req.query;
+    let filter={}
+    if(category){
+        filter.taskCategory = category;
+    }
+    if(date){
+        const specificDate = new Date(date);
+        filter.taskDueDate = specificDate;
+    }
+    let tasks = await Task.find(filter)
+    res.json(tasks)
+}
 
 const getSingleTask = async (req,res)=>{
     let id = req.params.id
@@ -32,8 +45,9 @@ const getSingleTask = async (req,res)=>{
 
 const updateTask = async (req,res)=>{
     let id = req.params.id
+    console.log(id)
     let newTaskData = req.body
-    let updated = await Task.updateOne({_id : id},{...newTaskData, $inc : {__v : 1}})
+    let updated = await Task.updateOne({_id : id},{...newTaskData})
     res.json(updated)
 }
 
@@ -61,5 +75,6 @@ module.exports = {
     getSingleTask,
     updateTask,
     deleteTask,
-    aggregations
+    aggregations,
+    filtertasks
 }

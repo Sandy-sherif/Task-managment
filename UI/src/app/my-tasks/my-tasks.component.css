@@ -17,6 +17,10 @@ li:first-child{
   padding:5% 7%;
   font-size: larger;
 }
+
+li:last-child{
+  border-bottom: none;
+}
 .align{
   display: flex;
   align-items: center;

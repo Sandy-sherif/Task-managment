@@ -69,6 +69,9 @@ li:first-child{
 li:first-child>span{
   color: black;
 }
+li:last-child{
+  border-bottom: none;
+}
 .day{
   color: #eb9b2b;
 }

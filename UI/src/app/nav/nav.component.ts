@@ -15,7 +15,7 @@ export class NavComponent {
   openDialog(): void {
     this.dialog.open(NewtaskComponent, {
       width: '35vw',
-      height: '78vh',
+      height: '87vh',
       disableClose: true,
       data: { name: 'John Doe' }
     });

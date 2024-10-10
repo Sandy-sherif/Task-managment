@@ -1,3 +1,7 @@
+.all{
+  display: flex;
+  flex-direction: column;
+}
 .order{
   display: flex;
   flex-direction: row;
@@ -18,4 +22,29 @@
     border-radius: 40px;
     margin-left: 2vw;
     margin-top: 10vh;
+}
+.comments{
+  width:15vw;
+  height:40vh;
+  background-color: white;
+  border-radius: 40px;
+  margin-left: 2vw;
+  margin-top: 10vh;
+}
+.categories{
+  width:20vw;
+  height:32vh;
+  background-color: white;
+  border-radius: 40px;
+  margin-left: 25vw;
+  margin-top: 2vh;
+}
+.tracking
+{
+    width:30vw;
+    height:32vh;
+    background-color: white;
+    border-radius: 40px;
+    margin-left: 2vw;
+    margin-top: 2vh;
 }

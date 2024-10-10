@@ -1,0 +1,27 @@
+li{
+  height: 15%;
+  padding: 3% 7%;
+  border-bottom: 2px solid #F7F5F4;
+  display: flex;
+  cursor: pointer;
+  flex-direction: row;
+}
+
+.column{
+  display: flex;
+  flex-direction: column;
+}
+li:first-child{
+  padding-top:6% ;
+  font-size: larger;
+}
+li:last-child{
+  border-bottom: none;
+}
+.first{
+  font-size: large;
+}
+
+.second{
+  font-size: small;
+}

@@ -22,7 +22,7 @@
     </div>
 
     <div class="days">
-      <div *ngFor="let day of daysArray" [class.current-date]="isCurrentDate(day)"
+      <div *ngFor="let day of daysArray" [class.current-date]="isCurrentDate(day)" (click)="changeColor(day||10)" [ngClass]="{ 'current-date': selectedDivId == day }"
            (click)="selectDate(day)">
         {{ day || '' }}
       </div>

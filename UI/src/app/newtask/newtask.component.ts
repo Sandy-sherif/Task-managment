@@ -2,12 +2,12 @@ import { TaskService } from './../services/task.service';
 import { Component } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 import { FormsModule } from '@angular/forms';
-import { NgStyle } from '@angular/common';
+import { NgStyle, NgForOf, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-newtask',
   standalone: true,
-  imports: [FormsModule,NgStyle],
+  imports: [FormsModule,NgStyle,NgForOf,NgIf],
   templateUrl: './newtask.component.html',
   styleUrl: './newtask.component.css'
 })
@@ -17,13 +17,18 @@ export class NewtaskComponent {
   date: string='';
   show:boolean=false;
   show2:boolean=false;
+  show3:boolean=false;
   color:string='transparent';
+  categories=['Work','Family','Freelance work','Confernce planning']
   model={
     taskName : '' ,
     taskDueDate : this.date,
     taskPriority : '',
     taskStage : 'Not started',
     taskDiscription : '',
+    taskCategory :'',
+    taskNotfication:''
+
   }
   selectedSpan: number | null = null;
 
@@ -37,6 +42,11 @@ export class NewtaskComponent {
     tomorrow.setDate(today.getDate() + 1);
     this.tomorrowDate = tomorrow.toISOString().split('T')[0];
   }
+
+  change(msg: string) {
+    this.taskService.change(msg); // This will notify other components
+  }
+
   selectSpan(index: number) {
     this.selectedSpan = index;
   }
@@ -49,9 +59,14 @@ export class NewtaskComponent {
     }
 
   }
+  selectItem(item: string) {
+    this.model.taskCategory = item;
+
+  }
 
   // Close the dialog
   closeDialog(): void {
+    this.change('s');
     this.dialogRef.close();
   }
   openDatePicker(dateInput: HTMLInputElement) {
@@ -75,6 +90,7 @@ export class NewtaskComponent {
   }
   addTask(): void {
     this.taskService.addTask(this.model).subscribe(() => {
+      this.change('s');
       console.log('added successfully');
       this.dialogRef.close();
     });
@@ -85,5 +101,7 @@ export class NewtaskComponent {
   enabledinput2(){
     this.show2=true;
 }
-
+enable(){
+  this.show3=!this.show3;
+}
 }

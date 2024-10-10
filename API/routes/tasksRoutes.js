@@ -9,6 +9,8 @@ router.route('/')
     .get(tasksController.getAllTasks)
     .post(tasksController.addTask)
 
+router.route('/filter').get(tasksController.filtertasks)
+
 router.route('/:id')
     .get(tasksController.getSingleTask)
     .patch(tasksController.updateTask)

@@ -2,12 +2,12 @@
   <li>My tasks ({{numberoftasks}})</li>
   <li *ngFor="let task of tasks">
     <div class="align">
-      <input class="checkbox-round" type="checkbox">
+      <input class="checkbox-round" type="checkbox" [checked]="task.taskStage=='Finished'" (change)="toggleTaskStage(task, $event)">
       <span>{{task.taskName}}</span>
 
     </div>
 
-    <span [ngStyle]="{'color': task.taskDueDate=='Today'? '#ffd900': 'black'}">{{task.taskDueDate}}</span>
+    <span [ngStyle]="{'color': task.displayDueDate=='Today'? '#ffd900': 'black'}">{{task.displayDueDate}}</span>
 
   </li>
 </ul>

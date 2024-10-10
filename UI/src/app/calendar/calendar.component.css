@@ -70,15 +70,18 @@ pre {
   color: black;
   cursor: pointer;
   border-color: black;
-  border-style: outset;
+  border-style: solid;
   border-width: 0.5px;
 }
 .week div {
   opacity: 0.5;
 }
 .current-date {
-  background-color: var(--accent);
-  color: var(--white);
+  background-color: #FAE150;
+  color: black;
+  border-color: black;
+  border-style: solid;
+  border-width: 0.5px;
 }
 .display-selected {
   margin-bottom: 10px;

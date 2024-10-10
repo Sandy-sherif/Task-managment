@@ -1,0 +1,21 @@
+.order{
+  display: flex;
+  flex-direction: row;
+}
+
+.calendar{
+  width:20vw;
+  height:45vh;
+  background-color: white;
+  border-radius: 40px;
+  margin-left: 25vw;
+  margin-top: 10vh;
+}
+.mytasks{
+    width:30vw;
+    height:45vh;
+    background-color: white;
+    border-radius: 40px;
+    margin-left: 2vw;
+    margin-top: 10vh;
+}

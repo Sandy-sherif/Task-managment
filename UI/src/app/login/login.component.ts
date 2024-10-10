@@ -39,6 +39,7 @@ export class LoginComponent {
       response => {
         console.log('login successful', response);
         if(response.status=='success'){
+          localStorage.setItem('isLoggedIn', 'true');
           this.router.navigate(['/home']);
         }
         else{

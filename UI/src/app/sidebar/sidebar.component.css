@@ -10,7 +10,7 @@
   align-items: center;
   margin: 20px 0;
   border-color: black;
-  border-style:outset;
+  border-style:solid;
   border-width: 1px;
 }
 span{
@@ -27,6 +27,7 @@ p{
   flex-direction: row;
   margin:7px 0;
   margin-left: 25px;
+  align-items: center;
 }
 ul{
   display: flex;
@@ -46,7 +47,7 @@ li {
   .second{
     border-top-color: #F7F5F4 ;
     border-top-width: 3px ;
-    border-top-style: outset ;
+    border-top-style: solid ;
   }
 
   img{

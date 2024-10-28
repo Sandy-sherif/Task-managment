@@ -18,6 +18,7 @@ export class SidebarComponent {
       .pipe(filter(event => event instanceof NavigationEnd))
       .subscribe((event: NavigationEnd) => {
         this.currentRoute = event.url; // Get the current route URL
+        console.log(event.url);
       });
   }
 

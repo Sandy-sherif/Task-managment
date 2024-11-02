@@ -10,7 +10,7 @@
         <span>Priority</span>
       </div>
     </li>
-    <li *ngFor="let task of tasksOfToday">
+    <li *ngFor="let task of tasksOfToday" (click)="rowClickedTwice(task._id)">
       <div class="center">
       <input class="checkbox-round" type="checkbox" [checked]="task.taskStage == 'Finished'"
       (change)="toggleTaskStage(task, $event)">
@@ -35,7 +35,7 @@
         <span>Priority</span>
       </div>
     </li>
-    <li *ngFor="let task of tasksOfTomorrow">
+    <li *ngFor="let task of tasksOfTomorrow" (click)="rowClickedTwice(task._id)">
       <div class="center">
       <input class="checkbox-round" type="checkbox" [checked]="task.taskStage == 'Finished'"
       (change)="toggleTaskStage(task, $event)">
@@ -60,7 +60,7 @@
         <span>Priority</span>
       </div>
     </li>
-    <li *ngFor="let task of tasksOfWeek">
+    <li *ngFor="let task of tasksOfWeek" (click)="rowClickedTwice(task._id)">
       <div class="center">
       <input [checked]="task.taskStage == 'Finished'"
       (change)="toggleTaskStage(task, $event)" class="checkbox-round" type="checkbox">

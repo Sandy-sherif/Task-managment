@@ -1,6 +1,9 @@
+import { EditTaskComponent } from './../edit-task/edit-task.component';
+import { Router } from '@angular/router';
 import { NgForOf, NgStyle } from '@angular/common';
 import { TaskService } from './../../services/task.service';
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-all-tasks',
@@ -14,7 +17,7 @@ export class AllTasksComponent implements OnInit{
   tasksOfTomorrow:any=[];
   tasksOfWeek:any=[];
    days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-  constructor( private service :TaskService){ }
+  constructor( private service :TaskService,private router:Router,public dialog: MatDialog){ }
 
   ngOnInit(): void {
   this.getall();
@@ -73,5 +76,16 @@ export class AllTasksComponent implements OnInit{
     (error) => {
       console.error('Error updating task stage', error);
     })
+  }
+
+  rowClickedTwice(id:any){
+    console.log(id);
+    this.service.taskid=id;
+   this.dialog.open(EditTaskComponent, {
+    width: '35vw',
+    height: '87vh',
+    disableClose: true,
+    data: { id: id }
+  });
   }
 }

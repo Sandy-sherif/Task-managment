@@ -1,4 +1,4 @@
-import { ApiService } from './../../services/user.service';
+import { ApiService } from '../../services/user.service';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NgIf } from '@angular/common';

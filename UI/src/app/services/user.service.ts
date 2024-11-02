@@ -18,6 +18,12 @@ export class ApiService {
     return this.http.post(`${this.apiUrl}/login`, data);
   }
   isLoggedIn(): boolean {
-    return localStorage.getItem('isLoggedIn') === 'true';  
+    return localStorage.getItem('isLoggedIn') === 'true';
+  }
+  getUserById(id: string): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/${id}`);
+  }
+  updateUser(id: string, task: any): Observable<any> {
+    return this.http.patch<any>(`${this.apiUrl}/${id}`, task);
   }
 }

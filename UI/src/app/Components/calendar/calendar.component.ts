@@ -13,10 +13,11 @@ export class CalendarComponent implements OnInit {
   date: Date = new Date();
   year: number = this.date.getFullYear();
   month: number = this.date.getMonth();
-  selectedDivId:number=10;
+  day:number = +(String(this.date).substring(8,11));
+  selectedDivId:number=+(String(this.date).substring(8,11));
   daysArray: (number | null)[] = [];
   formattedDate: string = '';
-  selectedDate: any = new Date(this.year, this.month, 10).toDateString()
+  selectedDate: any = new Date(this.year, this.month, this.day).toDateString()
 
   constructor(private service:TaskService){}
 
@@ -79,7 +80,7 @@ export class CalendarComponent implements OnInit {
 
       this.year === currentDate.getFullYear() &&
       this.month === currentDate.getMonth() &&
-      day === currentDate.getDate()
+      this.day === currentDate.getDate()
     );
   }
   changeColor(divId: number) {

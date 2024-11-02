@@ -25,3 +25,55 @@ span{
   font-weight: 400;
   font-style: normal;
 }
+.half{
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.moreHalf{
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.column{
+  display: flex;
+  flex-direction: column;
+}
+
+input,input:focus{
+  border-radius: 20px;
+  height: 30px;
+  border: 1px solid gray;
+  padding: 8px;
+
+}
+
+.buttons{
+  display: flex;
+  justify-content: center;
+  margin-top: 11%;
+}
+button{
+    text-align: center;
+    border-radius: 60px;
+    height: 5vh;
+
+    border-style: double;
+    border-width: 1px;
+}
+.change{
+  background-color: #FAE150;
+  width:7vw;
+}
+.save{
+  margin: 10px 20px;
+  width: 10vw;
+  background-color: #FAE150;
+}
+.cancel{
+  margin: 10px 20px;
+  width: 10vw;
+}

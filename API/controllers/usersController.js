@@ -66,17 +66,34 @@ const getAllUsers = async (req,res)=>{
 
 const getSingleUser = async (req,res)=>{
     try {
+        let id = req.params.id
+        let intendeUser = await User.findOne({_id : id })
+        res.json(intendeUser || {msg : "Not Found"})
+
         
     } catch (er) {
-        
+        console.log(er);
+        res.json({
+            status : responseMsgs.FAIL,
+            data : er
+        })
     }
 }
 
 const updateUserData = async (req,res)=>{
     try {
+        let id = req.params.id
+        console.log(id)
+        let newUserData = req.body
+        let updated = await User.updateOne({_id : id},{...newUserData})
+        res.json(updated)
         
     } catch (er) {
-        
+        console.log(er);
+        res.json({
+            status : responseMsgs.FAIL,
+            data : er
+        })
     }
 }
 

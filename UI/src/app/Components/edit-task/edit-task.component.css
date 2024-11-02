@@ -157,7 +157,7 @@ li {
 }
 .list {
   position: absolute;
-  transform: translateX(-50%);
+  transform: translateX(-130%);
   top: 91%;
   width: 15vw;
 }

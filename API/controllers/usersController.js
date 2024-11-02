@@ -39,13 +39,18 @@ const login = async (req,res)=>{
         if(!checkPassword){
             throw('Wrong Password')
         }
+        console.log( getUser._id);
         let token = jwt.sign({
-            name : getUser.userName
+            name : getUser.userName,
+            id :  getUser._id
         },process.env.JWTKEY)
+
+        
 
         res.cookie('jwt',token).json({
             status : responseMsgs.SUCCESS,
-            data : 'Logged In Successfully'
+            data : "Login successfully",
+            token: token 
         })
     } catch (er) {
         console.log(er);

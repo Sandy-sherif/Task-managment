@@ -40,6 +40,9 @@ export class LoginComponent {
         console.log('login successful', response);
         if(response.status=='success'){
           localStorage.setItem('isLoggedIn', 'true');
+          console.log(response.token);
+          this.apiService.getUserIdFromToken();
+          localStorage.setItem('token', response.token);
           this.router.navigate(['/home']);
         }
         else{
@@ -58,7 +61,7 @@ export class LoginComponent {
       response => {
         console.log('register successful', response);
         if(response.status=='success'){
-          this.router.navigate(['/home']);
+          this.login = !this.login;
         }
         else{
              this.msg=response.data;

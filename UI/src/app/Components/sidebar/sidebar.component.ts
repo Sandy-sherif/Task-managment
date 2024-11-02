@@ -1,3 +1,4 @@
+import { ApiService } from './../../services/user.service';
 
 import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
@@ -13,7 +14,7 @@ import { filter } from 'rxjs';
 })
 export class SidebarComponent {
   currentRoute: string='/home/dashboard';
-  constructor(private router: Router) {
+  constructor(private router: Router,private service:ApiService) {
     this.router.events
       .pipe(filter(event => event instanceof NavigationEnd))
       .subscribe((event: NavigationEnd) => {
@@ -25,6 +26,7 @@ export class SidebarComponent {
 
   logout(){
     localStorage.setItem('isLoggedIn', 'false');
+    this.service.userid='';
     this.router.navigate(['/login']);
   }
 

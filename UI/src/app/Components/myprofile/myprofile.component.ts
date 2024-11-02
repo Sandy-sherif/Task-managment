@@ -32,7 +32,7 @@ constructor(private service:ApiService,private router:Router){
   }
 
   getUserData(){
-    this.service.getUserById('67027ff7dcdf9ef80711f0d5').subscribe((data)=>{
+    this.service.getUserById(this.service.userid).subscribe((data)=>{
       console.log(data);
       this.model=data;
     })
@@ -40,7 +40,7 @@ constructor(private service:ApiService,private router:Router){
   }
 
   edituser(){
-    this.service.updateUser('67027ff7dcdf9ef80711f0d5',this.model).subscribe(()=>{
+    this.service.updateUser(this.service.userid,this.model).subscribe(()=>{
            this.router.navigate(['/home']);
     })
   }

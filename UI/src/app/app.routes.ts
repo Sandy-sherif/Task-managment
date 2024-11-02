@@ -1,3 +1,4 @@
+import { MyprofileComponent } from './myprofile/myprofile.component';
 import { AuthGuard } from './Guards/auth.guard';
 import { AllTasksComponent } from './all-tasks/all-tasks.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -28,6 +29,11 @@ export const routes: Routes = [
       {
         path:'myTasks',
         component: AllTasksComponent
+      }
+      ,
+      {
+        path:'profile',
+        component: MyprofileComponent
       },
       {
         path:'',

@@ -1,4 +1,4 @@
-import { TaskService } from './../services/task.service';
+import { TaskService } from './../../services/task.service';
 import { Component } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 import { FormsModule } from '@angular/forms';

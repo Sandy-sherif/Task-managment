@@ -1,4 +1,4 @@
-import { TaskService } from './../services/task.service';
+import { TaskService } from './../../services/task.service';
 import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 

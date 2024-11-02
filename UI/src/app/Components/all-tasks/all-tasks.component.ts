@@ -1,5 +1,5 @@
 import { NgForOf, NgStyle } from '@angular/common';
-import { TaskService } from './../services/task.service';
+import { TaskService } from './../../services/task.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

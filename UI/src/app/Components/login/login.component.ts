@@ -41,8 +41,9 @@ export class LoginComponent {
         if(response.status=='success'){
           localStorage.setItem('isLoggedIn', 'true');
           console.log(response.token);
-          this.apiService.getUserIdFromToken();
           localStorage.setItem('token', response.token);
+          this.apiService.getUserIdFromToken();
+
           this.router.navigate(['/home']);
         }
         else{

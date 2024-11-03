@@ -49,6 +49,7 @@ input{
   border-color: black;
   border-style:outset;
   border-width: 1px;
+  cursor: pointer;
 }
 button{
   text-align: center;
@@ -59,5 +60,6 @@ button{
     background-color: #FAE150;
     border-style: double;
     border-width: 1px;
+    cursor: pointer;
 
 }

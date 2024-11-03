@@ -27,6 +27,7 @@ export class SidebarComponent {
   logout(){
     localStorage.setItem('isLoggedIn', 'false');
     this.service.userid='';
+    localStorage.clear;
     this.router.navigate(['/login']);
   }
 

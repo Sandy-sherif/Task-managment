@@ -7,7 +7,7 @@ import * as jwtDecode from 'jwt-decode';
   providedIn: 'root' // This ensures the service is available application-wide
 })
 export class ApiService {
-  private apiUrl = 'http://localhost:3000/users';
+  private apiUrl = 'https://your-backend.up.railway.app/users';
   userid:string='';
   constructor(private http: HttpClient) {}
 

@@ -33,7 +33,7 @@ export class TaskService {
     this.dateSource.next(date);
   }
 
-  private apiUrl = 'http://localhost:3000/tasks';
+  private apiUrl = 'https://your-backend.up.railway.app/tasks';
 
   constructor(private http: HttpClient) { }
 

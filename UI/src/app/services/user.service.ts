@@ -7,7 +7,7 @@ import * as jwtDecode from 'jwt-decode';
   providedIn: 'root' // This ensures the service is available application-wide
 })
 export class ApiService {
-  private apiUrl = 'https://your-backend.up.railway.app/users';
+  private apiUrl = 'https://task-managment-production.up.railway.app/users';
   userid:string='';
   constructor(private http: HttpClient) {}
 

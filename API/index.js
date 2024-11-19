@@ -12,7 +12,8 @@ const cors = require('cors');
 
 
 // Enable all CORS requests
-app.use(cors());
+app.use(cors({
+    origin: 'https://taupe-twilight-58f5e5.netlify.app'}));
 
 app.listen(process.env.PORT,()=>{
     console.log('Server Started');

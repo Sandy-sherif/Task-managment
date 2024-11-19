@@ -13,8 +13,10 @@ const cors = require('cors');
 
 // Enable all CORS requests
 app.use(cors({
-    origin: 'https://taupe-twilight-58f5e5.netlify.app'}));
-
+    origin: 'https://taupe-twilight-58f5e5.netlify.app', // Allow requests only from your Netlify frontend
+    methods: ['GET', 'POST', 'PUT','PATCH', 'DELETE'], // HTTP methods you want to allow
+    credentials: true, // Allow cookies if needed
+  }));
 app.listen(process.env.PORT,()=>{
     console.log('Server Started');
 })
